@@ -1,0 +1,65 @@
+Altium Designer Pick and Place Locations
+C:\Users\acvig\AppData\Local\TempReleases\Snapshot\1\Assembly\Pick Place\Pick Place for PCB1.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       05/07/23
+Time:       14:11
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Center-X(mil) Center-Y(mil) Comment             Description                                                                                                              Designator Footprint                       Layer       Rotation 
+3825.000      4045.000      1N5819HW-7-F        "DIODE SCHOTTKY 40V 1A SOD123"                                                                                           D2         FP-SOD123-IPC_A                 TopLayer    180      
+4460.000      4020.000      1N5819HW-7-F        "DIODE SCHOTTKY 40V 1A SOD123"                                                                                           D1         FP-SOD123-IPC_A                 TopLayer    0        
+2288.543      1435.039      1655                "Intelligent Control LED Integrated Light Source, 3.5 to 5.3 V, -25 to 80 degC, 4-Pin SMD, RoHS, Tape and Reel"          U2         ADA-RGB-1655_V                  BottomLayer 180      
+1657.697      2265.000      KMR211GLFS          "SWITCH TACTILE SPST-NO 0.05A 32V"                                                                                       SW2        FP-KMR211GLFS-MFG               TopLayer    90       
+1887.697      2265.000      KMR211GLFS          "SWITCH TACTILE SPST-NO 0.05A 32V"                                                                                       SW1        FP-KMR211GLFS-MFG               TopLayer    90       
+3766.536      3795.000      CR0805-FX-1002ELF   "Thick Film Chip Resistors 0805 10kO 0.125W 1% 100ppm/°C"                                                                R6         FP-CR0805-IPC_A                 TopLayer    0        
+2569.606      2515.000      BME680              "Integrated Environmental Unit"                                                                                          U1         PSON80P300X300X100-8N           TopLayer    270      
+3202.480      1810.000      08055A2R2CAT2A      ""                                                                                                                       C11        CAPC2013X94X50NL20T25           TopLayer    0        
+3270.000      1518.937      0900AT43A0070E      "RF ANT CHIP SOLDER SMD"                                                                                                 ANT1       FP-0900AT43A0070E-MFG           TopLayer    270      
+3372.787      2350.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C12        FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+3372.787      2450.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C13        FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+3755.000      2145.000      CR0805-FX-1002ELF   "Thick Film Chip Resistors 0805 10kO 0.125W 1% 100ppm/°C"                                                                R1         FP-CR0805-IPC_A                 TopLayer    180      
+3345.000      2925.000      61031021121         "SMT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Dual Row, 10 pins"                                                       P2         61031021121                     TopLayer    90       
+3330.000      2125.000      ZGM230SB27HGN2R     "No Description Available"                                                                                               U7         QFN44_ZGM230S_SIL               TopLayer    90       
+2477.565      2270.000      CRCW08054K70FKEA    "RES Thick Film, 4.7kO, 1%, 0.125W, 100ppm/°C, 0805"                                                                     R3         FP-CRCW0805-e3-IPC_B            TopLayer    180      
+2665.000      2270.000      CRCW08054K70FKEA    "RES Thick Film, 4.7kO, 1%, 0.125W, 100ppm/°C, 0805"                                                                     R2         FP-CRCW0805-e3-IPC_B            TopLayer    0        
+2775.000      1812.787      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C3         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    90       
+4015.000      2147.787      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C2         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    270      
+3900.000      2150.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C1         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    270      
+3947.213      3620.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C8         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+3950.000      3725.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C7         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+3330.000      3840.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C9         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+2995.000      3655.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C6         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+3165.000      3655.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C5         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+2890.000      1812.787      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C4         FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    90       
+3895.000      4215.000      CRCW08055K10JNEA    ""                                                                                                                       R13        RESC2013X50X30LL20T20           TopLayer    270      
+4390.000      4142.520      CRCW08055K10JNEA    ""                                                                                                                       R11        RESC2013X50X30LL20T20           TopLayer    270      
+3255.000      4212.480      CRCW08055K10JNEA    ""                                                                                                                       R14        RESC2013X50X30LL20T20           TopLayer    270      
+3765.000      4320.000      CRCW08055K10JNEA    ""                                                                                                                       R12        RESC2013X50X30LL20T20           TopLayer    270      
+2080.000      3070.000      CR0805-FX-10R0ELF   "Thick Film Chip Resistors 0805 10O 0.125W 1% 100ppm/°C"                                                                 R17        FP-CR0805-IPC_B                 TopLayer    90       
+3075.000      3860.000      AMS1117-3.3         "LDO Voltage Regulators 1A, 3.3V"                                                                                        U3         FP-AMS1117-IPC_C                TopLayer    180      
+1970.000      3185.000      08055C104KAT2A      "General Purpose Ceramic Capacitor, 0805, 100nF, 10%, X7R, 0.15, 50V"                                                    C10        FP-0805-L_2_01_0_2-W_1_25-IPC_C TopLayer    0        
+2145.000      3495.000      CRCW080512K1FKEA    "RES Thick Film, 12.1kO, 1%, 0.125W, 100ppm/°C, 0805"                                                                    R15        FP-CRCW0805-e3-IPC_B            TopLayer    90       
+2455.000      3215.000      CR0805-FX-1002ELF   "Thick Film Chip Resistors 0805 10kO 0.125W 1% 100ppm/°C"                                                                R20        FP-CR0805-IPC_A                 TopLayer    180      
+2219.528      3274.192      LAN8720A-CP-ABC     "IC TRANSCEIVER FULL 2/2 24SQFN"                                                                                         U6         FP-24-S4QFN-4x4B-0_5P-IPC_B     TopLayer    0        
+2270.000      3070.000      CR0805-FX-10R0ELF   "Thick Film Chip Resistors 0805 10O 0.125W 1% 100ppm/°C"                                                                 R19        FP-CR0805-IPC_B                 TopLayer    90       
+2455.000      3325.000      CR0805-FX-1002ELF   "Thick Film Chip Resistors 0805 10kO 0.125W 1% 100ppm/°C"                                                                R18        FP-CR0805-IPC_A                 TopLayer    0        
+2175.000      3070.000      CR0805-FX-10R0ELF   "Thick Film Chip Resistors 0805 10O 0.125W 1% 100ppm/°C"                                                                 R16        FP-CR0805-IPC_B                 TopLayer    90       
+3505.000      4275.217      217179-0001         "CONN RCP USB2.0 TYP C 24P SMD RA"                                                                                       J3         FP-217179-0001-MFG              TopLayer    180      
+4135.000      4280.217      217179-0001         "CONN RCP USB2.0 TYP C 24P SMD RA"                                                                                       J2         FP-217179-0001-MFG              TopLayer    180      
+2511.260      3715.000      CR0805-FX-49R9ELF   "Thick Film Chip Resistors 0805 49.9O 0.125W 1% 100ppm/°C"                                                               R7         FP-CR0805-MFG                   TopLayer    180      
+2325.000      3715.000      CR0805-FX-49R9ELF   "Thick Film Chip Resistors 0805 49.9O 0.125W 1% 100ppm/°C"                                                               R8         FP-CR0805-MFG                   TopLayer    0        
+2140.000      3715.000      CR0805-FX-49R9ELF   "Thick Film Chip Resistors 0805 49.9O 0.125W 1% 100ppm/°C"                                                               R9         FP-CR0805-MFG                   TopLayer    180      
+1950.000      3715.000      CR0805-FX-49R9ELF   "Thick Film Chip Resistors 0805 49.9O 0.125W 1% 100ppm/°C"                                                               R10        FP-CR0805-MFG                   TopLayer    0        
+2215.000      4038.543      2-406549-1          "CONN MOD JACK 8P8C R/A SHIELDED"                                                                                        J1         FP-2-406549-1-MFG               TopLayer    180      
+1825.000      1800.000      CR0805-FX-1002ELF   "Thick Film Chip Resistors 0805 10kO 0.125W 1% 100ppm/°C"                                                                R5         FP-CR0805-IPC_A                 TopLayer    270      
+1825.000      1980.000      CR0805-FX-1002ELF   "Thick Film Chip Resistors 0805 10kO 0.125W 1% 100ppm/°C"                                                                R4         FP-CR0805-IPC_A                 TopLayer    90       
+4135.000      3700.000      CP2105-F01-GM       "Single-Chip USB to Dual UART Bridge, 5 Dig I/O Pins, Internal Oscillator, 296 Bytes EEPROM, -40 to 85 degC, 24-pin QFN" U4         SLAB-QFN-24-2675x2675TP_N       TopLayer    270      
+3520.000      3724.999      CP2102N-A02-GQFN20R "IC USB TO UART BRIDGE QFN20"                                                                                            U5         FP-CP2102N-A02-GQFN20R-MFG      TopLayer    270      
+2300.354      1704.685      ESP32-WROOM-32      "RX TXRX MOD WIFI SURFACE MOUNT"                                                                                         MD2        FP-ESP32-WROOM-32-MFG           TopLayer    180      
+4398.701      2320.000      61031021121         "SMT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Dual Row, 10 pins"                                                       P1         61031021121                     TopLayer    270      
+4092.440      1633.070      MGM210P022JIA2      "RX TXRX MOD BLUETOOTH CHIP SMD"                                                                                         MD1        FP-MGM210P022JIA2-MFG           TopLayer    180      

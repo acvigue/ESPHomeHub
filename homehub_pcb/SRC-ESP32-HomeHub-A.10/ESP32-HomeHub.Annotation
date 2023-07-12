@@ -1,0 +1,22 @@
+[DesignatorManager]
+
+[SheetNumberManager]
+SheetNumberOrder=Display Order
+SheetNumberMethod=Increasing
+DocumentName0=Connectors.SchDoc
+UniqueIDPath0=
+SheetNumber0=4
+DocumentName1=ESP32.SchDoc
+UniqueIDPath1=
+SheetNumber1=2
+DocumentName2=PHY.SchDoc
+UniqueIDPath2=
+SheetNumber2=5
+DocumentName3=Radio.SchDoc
+UniqueIDPath3=
+SheetNumber3=1
+DocumentName4=SerialConverter.SchDoc
+UniqueIDPath4=
+SheetNumber4=3
+
+

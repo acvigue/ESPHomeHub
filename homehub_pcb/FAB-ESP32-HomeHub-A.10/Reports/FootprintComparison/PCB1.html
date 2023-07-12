@@ -1,0 +1,520 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Footprint Comparison Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Footprint Comparison Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">7/5/2023</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2:11:44 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\acvig\AppData\Local\TempReleases\Snapshot\1\PCB1.PcbDoc" class="file"><acronym title="C:\Users\acvig\AppData\Local\TempReleases\Snapshot\1\PCB1.PcbDoc">C:\Users\acvig\AppData\Local\TempReleases\Snapshot\1\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="ID0QFEDUBPB0EKM5ZYUG3XFQZMOO1E5Z14JCZT2WI4TVWDBMLN1TDP"><h2>Contents</h2></a><p class="contents_level1"><a href="#ID0QFEDUBPB0EKM5ZYUG3XFQZMOO1E5Z14JCZT2WI4TVWDBMLN1TDP">Contents</a></p>
+<p class="contents_level1"><a href="#IDEKHDEEJ1RBVUH3EXXHLWDC2KLDMEHMDUKFVYIUPV1SGYCGMFKJNN">Components Status Summary</a></p>
+<p class="contents_level2"><a href="#IDVNZ2YJW2IJIIF3WUTSIJLG5GPIHK5FM4H2VXHILPRE3YW2VETCJI">Matched Components List<br></a></p><br><a name="IDEKHDEEJ1RBVUH3EXXHLWDC2KLDMEHMDUKFVYIUPV1SGYCGMFKJNN"><h2>Components Status Summary</h2></a><h2>Matched Components List</h2><a name="IDVNZ2YJW2IJIIF3WUTSIJLG5GPIHK5FM4H2VXHILPRE3YW2VETCJI"><table>
+<tr>
+<th class="column1">Designator</th>
+<th class="column2">Footprint</th>
+<th class="column3">Footprint reference</th>
+<th class="column4">Footprint to reference Library</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">ANT1</td>
+<td style="Width:20%" class="column2">FP-0900AT43A0070E-MFG</td>
+<td style="Width:20%" class="column3">FP-0900AT43A0070E-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C1</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C2</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C3</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C4</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C5</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C6</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C7</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C8</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C9</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C10</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C11</td>
+<td style="Width:20%" class="column2">CAPC2013X94X50NL20T25</td>
+<td style="Width:20%" class="column3">CAPC2013X94X50NL20T25</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C12</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C13</td>
+<td style="Width:20%" class="column2">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:20%" class="column3">FP-0805-L_2_01_0_2-W_1_25-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D1</td>
+<td style="Width:20%" class="column2">FP-SOD123-IPC_A</td>
+<td style="Width:20%" class="column3">FP-SOD123-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D2</td>
+<td style="Width:20%" class="column2">FP-SOD123-IPC_A</td>
+<td style="Width:20%" class="column3">FP-SOD123-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">J1</td>
+<td style="Width:20%" class="column2">FP-2-406549-1-MFG</td>
+<td style="Width:20%" class="column3">FP-2-406549-1-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">J2</td>
+<td style="Width:20%" class="column2">FP-217179-0001-MFG</td>
+<td style="Width:20%" class="column3">FP-217179-0001-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">J3</td>
+<td style="Width:20%" class="column2">FP-217179-0001-MFG</td>
+<td style="Width:20%" class="column3">FP-217179-0001-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">MD1</td>
+<td style="Width:20%" class="column2">FP-MGM210P022JIA2-MFG</td>
+<td style="Width:20%" class="column3">FP-MGM210P022JIA2-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">MD2</td>
+<td style="Width:20%" class="column2">FP-ESP32-WROOM-32-MFG</td>
+<td style="Width:20%" class="column3">FP-ESP32-WROOM-32-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">P1</td>
+<td style="Width:20%" class="column2">61031021121</td>
+<td style="Width:20%" class="column3">61031021121</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">P2</td>
+<td style="Width:20%" class="column2">61031021121</td>
+<td style="Width:20%" class="column3">61031021121</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R1</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_A</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R2</td>
+<td style="Width:20%" class="column2">FP-CRCW0805-e3-IPC_B</td>
+<td style="Width:20%" class="column3">FP-CRCW0805-e3-IPC_B</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R3</td>
+<td style="Width:20%" class="column2">FP-CRCW0805-e3-IPC_B</td>
+<td style="Width:20%" class="column3">FP-CRCW0805-e3-IPC_B</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R4</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_A</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R5</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_A</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R6</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_A</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R7</td>
+<td style="Width:20%" class="column2">FP-CR0805-MFG</td>
+<td style="Width:20%" class="column3">FP-CR0805-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R8</td>
+<td style="Width:20%" class="column2">FP-CR0805-MFG</td>
+<td style="Width:20%" class="column3">FP-CR0805-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R9</td>
+<td style="Width:20%" class="column2">FP-CR0805-MFG</td>
+<td style="Width:20%" class="column3">FP-CR0805-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R10</td>
+<td style="Width:20%" class="column2">FP-CR0805-MFG</td>
+<td style="Width:20%" class="column3">FP-CR0805-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R11</td>
+<td style="Width:20%" class="column2">RESC2013X50X30LL20T20</td>
+<td style="Width:20%" class="column3">RESC2013X50X30LL20T20</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R12</td>
+<td style="Width:20%" class="column2">RESC2013X50X30LL20T20</td>
+<td style="Width:20%" class="column3">RESC2013X50X30LL20T20</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R13</td>
+<td style="Width:20%" class="column2">RESC2013X50X30LL20T20</td>
+<td style="Width:20%" class="column3">RESC2013X50X30LL20T20</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R14</td>
+<td style="Width:20%" class="column2">RESC2013X50X30LL20T20</td>
+<td style="Width:20%" class="column3">RESC2013X50X30LL20T20</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R15</td>
+<td style="Width:20%" class="column2">FP-CRCW0805-e3-IPC_B</td>
+<td style="Width:20%" class="column3">FP-CRCW0805-e3-IPC_B</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R16</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_B</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_B</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R17</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_B</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_B</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R18</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_A</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R19</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_B</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_B</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R20</td>
+<td style="Width:20%" class="column2">FP-CR0805-IPC_A</td>
+<td style="Width:20%" class="column3">FP-CR0805-IPC_A</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">SW1</td>
+<td style="Width:20%" class="column2">FP-KMR211GLFS-MFG</td>
+<td style="Width:20%" class="column3">FP-KMR211GLFS-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">SW2</td>
+<td style="Width:20%" class="column2">FP-KMR211GLFS-MFG</td>
+<td style="Width:20%" class="column3">FP-KMR211GLFS-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U1</td>
+<td style="Width:20%" class="column2">PSON80P300X300X100-8N</td>
+<td style="Width:20%" class="column3">PSON80P300X300X100-8N</td>
+<td style="Width:60%" class="column4">C:\Users\Public\Documents\SnapEDA Altium Plugin\libraries\SnapEDA_Library\BME680.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U2</td>
+<td style="Width:20%" class="column2">ADA-RGB-1655_V</td>
+<td style="Width:20%" class="column3">ADA-RGB-1655_V</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U3</td>
+<td style="Width:20%" class="column2">FP-AMS1117-IPC_C</td>
+<td style="Width:20%" class="column3">FP-AMS1117-IPC_C</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U4</td>
+<td style="Width:20%" class="column2">SLAB-QFN-24-2675x2675TP_N</td>
+<td style="Width:20%" class="column3">SLAB-QFN-24-2675x2675TP_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U5</td>
+<td style="Width:20%" class="column2">FP-CP2102N-A02-GQFN20R-MFG</td>
+<td style="Width:20%" class="column3">FP-CP2102N-A02-GQFN20R-MFG</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U6</td>
+<td style="Width:20%" class="column2">FP-24-S4QFN-4x4B-0_5P-IPC_B</td>
+<td style="Width:20%" class="column3">FP-24-S4QFN-4x4B-0_5P-IPC_B</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U7</td>
+<td style="Width:20%" class="column2">QFN44_ZGM230S_SIL</td>
+<td style="Width:20%" class="column3">QFN44_ZGM230S_SIL</td>
+<td style="Width:60%" class="column4">Purdue University</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
